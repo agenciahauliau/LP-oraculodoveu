@@ -7,15 +7,17 @@ async function userInsta() {
     let obj = await (await fetch(url)).json();
     let instagram = document.querySelector('.instagram .head')
 
+    console.log(obj)
+
     instagram.innerHTML += `
             <div class="avatar">
                 <a href="https://www.instagram.com/${obj.username}" target="_blank" rel =“noopener noreferrer nofollow”> 
-                    <img src="${obj.profile_picture}" alt="${obj.name}" title="${obj.name}"/>
+                    <img src="../Assets/image/profile.jpeg" alt="${obj.username}" title="${obj.username}"/>
                 </a>
             </div>
             <div class="text">
-               <h3>${obj.name}</h3>
-               <p>${obj.username}</p>
+               <h3>🔥🌸 Flor de Luz 🌸🔥</h3>
+               <p>@${obj.username}</p>
             </div>`
 }
 

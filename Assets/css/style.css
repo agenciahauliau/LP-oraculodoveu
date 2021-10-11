@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 14px;
+  font-family: "Garamond";
 }
 
 li {
@@ -43,22 +44,35 @@ img {
 }
 
 header {
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
 }
 
 header .menu {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .menu ul {
+  width: calc((100% / 2) - 30px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header .menu ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 13px;
   margin-left: 34px;
 }
@@ -67,10 +81,23 @@ header .menu ul li {
   font-family: "Norse";
   font-size: 1.2em;
   font-weight: 800;
-  margin: 21px 13px;
+  margin: 21px;
+}
+
+header .menu ul.logo {
+  width: 60px;
+}
+
+header .menu ul.logo li {
+  margin: 8px;
+}
+
+section {
+  margin: 55px 0;
 }
 
 section .container {
+  width: 100%;
   max-width: 1140px;
   margin: auto;
 }
@@ -85,12 +112,76 @@ section .container {
   background: linear-gradient(45deg, #ff2800, #800020);
 }
 
+.section1 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section1 .imagem {
+  margin: auto;
+}
+
+.section1 .imagem img {
+  width: calc(100vh / 1.3793);
+  height: 100vh;
+}
+
+.section2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section2 .imagem {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 89px 0;
+}
+
+.section2 .imagem img {
+  width: 233px;
+}
+
+.section2 .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section2 .texto h2 {
+  font-size: 1.25em;
+}
+
+.section2 .texto h3 {
+  font-family: "Norse";
+  font-size: 2.75em;
+}
+
 .section4 .texto {
   padding: 21px;
   margin: 55px 0;
 }
 
-.section4 .texto h1 {
+.section4 .texto h2 {
   margin: 34px 0;
   font-family: "Norse";
 }
@@ -122,7 +213,7 @@ section .container {
 }
 
 .section4 .instagram .head .avatar::before {
-  content: '';
+  content: "";
   width: 130px;
   height: 130px;
   position: absolute;
@@ -134,7 +225,7 @@ section .container {
 }
 
 .section4 .instagram .head .avatar::after {
-  content: '';
+  content: "";
   width: 126px;
   height: 126px;
   position: absolute;
@@ -163,12 +254,76 @@ section .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section4 .instagram .medias .media {
   width: 250px;
   height: 250px;
   margin: 5px;
+}
+
+.section5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section5 .texto {
+  width: 50%;
+  padding: 21px;
+  margin: 55px 0;
+}
+
+.section5 .texto h2 {
+  margin: 34px 0;
+  font-family: "Norse";
+}
+
+.section5 .texto p {
+  margin: 21px 0;
+  line-height: 1.75em;
+}
+
+.section5 .form {
+  width: 50%;
+  margin: 55px 0;
+}
+
+.section5 .form input,
+.section5 .form textarea {
+  width: 100%;
+  padding: 13px 21px;
+  margin: 8px 0;
+  border: 1px solid #0005;
+}
+
+.section5 .form input,
+.section5 .form textarea::-webkit-input-placeholder {
+  font-family: "Norse";
+}
+
+.section5 .form input,
+.section5 .form textarea:-ms-input-placeholder {
+  font-family: "Norse";
+}
+
+.section5 .form input,
+.section5 .form textarea::-ms-input-placeholder {
+  font-family: "Norse";
+}
+
+.section5 .form input,
+.section5 .form textarea::placeholder {
+  font-family: "Norse";
+}
+
+.section5 .form button {
+  font-family: "Norse";
+  padding: 13px;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 820px) {
@@ -181,7 +336,6 @@ section .container {
   section .container {
     max-width: 1140px;
     margin: auto;
-    margin-left: 233px;
   }
 }
 /*# sourceMappingURL=style.css.map */

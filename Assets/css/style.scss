@@ -4,6 +4,7 @@
   border: 0;
   box-sizing: border-box;
   font-size: 14px;
+  font-family: "Garamond";
 }
 
 li {
@@ -41,27 +42,40 @@ img {
 }
 
 header {
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
   .menu {
-    height: 100vh;
     display: flex;
-    align-items: center;
+    flex: wrap;
+    justify-content: center;
     ul {
+      width: calc((100% / 2) - 30px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 13px;
       margin-left: 34px;
       li {
         font-family: "Norse";
         font-size: 1.2em;
         font-weight: 800;
-        margin: 21px 13px;
+        margin: 21px;
+      }
+      &.logo {
+        width: 60px;
+        li {
+          margin: 8px;
+        }
       }
     }
   }
 }
 section {
+  margin: 55px 0;
   .container {
+    width: 100%;
     max-width: 1140px;
     margin: auto;
   }
@@ -72,13 +86,52 @@ section {
   display: flex;
   position: relative;
   background: linear-gradient(45deg, #ff2800, #800020);
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .imagem {
+    margin: auto;
+    img {
+      width: calc(100vh / 1.3793);
+      height: 100vh;
+    }
+  }
+}
+
+.section2 {
+  .container {
+    display: flex;
+  }
+  .imagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 89px 0;
+    img {
+      width: 233px;
+    }
+  }
+  .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 1.25em;
+    }
+    h3 {
+      font-family: "Norse";
+      font-size: 2.75em;
+    }
+  }
 }
 
 .section4 {
   .texto {
     padding: 21px;
     margin: 55px 0;
-    h1 {
+    h2 {
       margin: 34px 0;
       font-family: "Norse";
     }
@@ -98,17 +151,17 @@ section {
         height: 120px;
         position: relative;
         img {
-            border-radius: 50%;
+          border-radius: 50%;
         }
         &::before {
-            content: '';
-            width: 130px;
-            height: 130px;
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            z-index: -2;
-            border-radius: 50%;
+          content: "";
+          width: 130px;
+          height: 130px;
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          z-index: -2;
+          border-radius: 50%;
           background: linear-gradient(
             45deg,
             #405de6,
@@ -120,15 +173,15 @@ section {
           );
         }
         &::after {
-            content: '';
-            width: 126px;
-            height: 126px;
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            z-index: -1;
-            border-radius: 50%;
-            background: #fff;
+          content: "";
+          width: 126px;
+          height: 126px;
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          z-index: -1;
+          border-radius: 50%;
+          background: #fff;
         }
       }
       .text {
@@ -144,11 +197,51 @@ section {
     .medias {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       .media {
         width: 250px;
         height: 250px;
         margin: 5px;
       }
+    }
+  }
+}
+
+.section5 {
+  .container {
+    display: flex;
+  }
+  .texto {
+    width: 50%;
+    padding: 21px;
+    margin: 55px 0;
+    h2 {
+      margin: 34px 0;
+      font-family: "Norse";
+    }
+    p {
+      margin: 21px 0;
+      line-height: 1.75em;
+    }
+  }
+  .form {
+    width: 50%;
+    margin: 55px 0;
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 21px;
+      margin: 8px 0;
+      border: 1px solid #0005;
+    }
+    input,
+    textarea::placeholder {
+      font-family: "Norse";
+    }
+    button {
+      font-family: "Norse";
+      padding: 13px;
+      font-weight: 600;
     }
   }
 }
@@ -172,7 +265,6 @@ section {
     .container {
       max-width: 1140px;
       margin: auto;
-      margin-left: 233px;
     }
   }
 }
