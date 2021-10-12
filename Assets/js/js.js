@@ -20,10 +20,7 @@ function efeitoScroll() {
     } else {
         Menu.classList.remove('menuDesktop')
     }
-
 };
-
-//////////// Ações
 
 efeitoScroll()
 
@@ -40,9 +37,27 @@ const enviarMensagem = document.querySelector('.form button')
 enviarMensagem.addEventListener('click', function () {
     const nomeContato = document.querySelector('.form input[name="nome"]').value
     const textoContato = document.querySelector('.form textarea[name="mensagem"]').value
-    
-    if (nomeContato && textoContato) {        
+
+    if (nomeContato && textoContato) {
         !window.open(`https://api.whatsapp.com/send?phone=+556281483910&text=Oi! meu nome é ${nomeContato}. ${textoContato}`)
     }
 })
 
+const produtos = document.querySelectorAll('.produto')
+const destaques = document.querySelector('.destaques')
+
+produtos.forEach((produto, idx) => {
+    if (produto.className !== 'produto') {
+        destaques.children[idx].classList.add('selecionado')
+    }
+})
+
+for(const [idx, produto] of produtos.entries()){
+
+    produto.addEventListener('click', function(){
+        const destaque = document.querySelector('.destaque.selecionado')
+
+        destaque.classList.remove('selecionado')
+        destaques.children[idx].classList.add('selecionado')
+    })
+}

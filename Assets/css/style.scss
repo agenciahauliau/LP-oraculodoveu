@@ -27,9 +27,13 @@ h5 {
 h6 {
   font-size: 0.6em;
 }
+p {
+  line-height: 1.5em;
+}
 img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 header {
@@ -92,7 +96,9 @@ section {
 .section2 {
   margin: 144px 0;
   .container {
+    height: 70v;
     display: flex;
+    position: relative;
   }
   .imagem {
     width: 50%;
@@ -120,20 +126,110 @@ section {
 }
 .section3 {
   .container {
+    height: 70vh;
     display: flex;
   }
-  .texto,
+  .texto {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-family: "Norse";
+    }
+  }
   .imagem {
-    width: 50%;
+    width: 55%;
+    position: relative;
+    img {
+      width: 134%;
+      height: auto;
+      position: absolute;
+      right: -34%;
+      bottom: -21%;
+    }
   }
 }
 .section4 {
   .container {
+    height: 70vh;
     display: flex;
   }
-  .texto,
   .imagem {
+    width: 55%;
+    position: relative;
+    img {
+      width: 134%;
+      height: auto;
+      position: absolute;
+      left: -34%;
+      top: -21%;
+    }
+  }
+  .texto {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-family: "Norse";
+    }
+  }
+}
+.section5 {
+  .container {
+    display: flex;
+  }
+  .esquerda {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      font-family: "Norse";
+      font-size: 1.25em;
+      text-align: center;
+    }
+  }
+  .direita {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 89%;
+      margin-top: 55px;
+    }
+  }
+}
+.section6 {
+  .container {
+    display: flex;
+  }
+  .produtos,
+  .destaques {
     width: 50%;
+  }
+  .produtos {
+    display: flex;
+    flex-wrap: wrap;
+    .produto {
+      width: 50%;
+      .texto {
+        h4 {
+          font-family: "Norse";
+        }
+      }
+    }
+  }
+  .destaques {
+    .destaque {
+      display: none;
+      &.selecionado {
+        display: block;
+      }
+    }
   }
 }
 .section7 {
@@ -146,7 +242,6 @@ section {
     }
     p {
       margin: 21px 0;
-      line-height: 1.75em;
     }
   }
   .instagram {
