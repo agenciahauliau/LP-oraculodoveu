@@ -74,7 +74,6 @@ header .menu ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 13px;
-  margin-left: 34px;
 }
 
 header .menu ul li {
@@ -109,6 +108,7 @@ section .container {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-top: 0;
   background: linear-gradient(45deg, #ff2800, #800020);
 }
 
@@ -128,6 +128,10 @@ section .container {
 .section1 .imagem img {
   width: calc(100vh / 1.3793);
   height: 100vh;
+}
+
+.section2 {
+  margin: 144px 0;
 }
 
 .section2 .container {
@@ -168,7 +172,8 @@ section .container {
 }
 
 .section2 .texto h2 {
-  font-size: 1.25em;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .section2 .texto h3 {
@@ -176,43 +181,65 @@ section .container {
   font-size: 2.75em;
 }
 
-.section4 .texto {
+.section3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section3 .texto,
+.section3 .imagem {
+  width: 50%;
+}
+
+.section4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section4 .texto,
+.section4 .imagem {
+  width: 50%;
+}
+
+.section7 .texto {
   padding: 21px;
   margin: 55px 0;
 }
 
-.section4 .texto h2 {
+.section7 .texto h2 {
   margin: 34px 0;
   font-family: "Norse";
 }
 
-.section4 .texto p {
+.section7 .texto p {
   margin: 21px 0;
   line-height: 1.75em;
 }
 
-.section4 .instagram {
+.section7 .instagram {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.section4 .instagram .head {
+.section7 .instagram .head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 21px;
 }
 
-.section4 .instagram .head .avatar {
+.section7 .instagram .head .avatar {
   width: 120px;
   height: 120px;
   position: relative;
 }
 
-.section4 .instagram .head .avatar img {
+.section7 .instagram .head .avatar img {
   border-radius: 50%;
 }
 
-.section4 .instagram .head .avatar::before {
+.section7 .instagram .head .avatar::before {
   content: "";
   width: 130px;
   height: 130px;
@@ -224,7 +251,7 @@ section .container {
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.section4 .instagram .head .avatar::after {
+.section7 .instagram .head .avatar::after {
   content: "";
   width: 126px;
   height: 126px;
@@ -236,19 +263,19 @@ section .container {
   background: #fff;
 }
 
-.section4 .instagram .head .text {
+.section7 .instagram .head .text {
   margin: 21px 21px 34px;
 }
 
-.section4 .instagram .head .text h3 {
+.section7 .instagram .head .text h3 {
   margin: 8px 0;
 }
 
-.section4 .instagram .head .text p {
+.section7 .instagram .head .text p {
   margin: 5px 0;
 }
 
-.section4 .instagram .medias {
+.section7 .instagram .medias {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,68 +286,73 @@ section .container {
           justify-content: center;
 }
 
-.section4 .instagram .medias .media {
+.section7 .instagram .medias .media {
   width: 250px;
   height: 250px;
   margin: 5px;
 }
 
-.section5 .container {
+.section8 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.section5 .texto {
+.section8 .texto {
   width: 50%;
   padding: 21px;
   margin: 55px 0;
 }
 
-.section5 .texto h2 {
+.section8 .texto h2 {
   margin: 34px 0;
   font-family: "Norse";
 }
 
-.section5 .texto p {
+.section8 .texto p {
+  max-width: 377px;
   margin: 21px 0;
   line-height: 1.75em;
 }
 
-.section5 .form {
+.section8 .form {
   width: 50%;
   margin: 55px 0;
 }
 
-.section5 .form input,
-.section5 .form textarea {
+.section8 .form input,
+.section8 .form textarea {
   width: 100%;
   padding: 13px 21px;
   margin: 8px 0;
   border: 1px solid #0005;
 }
 
-.section5 .form input,
-.section5 .form textarea::-webkit-input-placeholder {
+.section8 .form input,
+.section8 .form textarea::-webkit-input-placeholder {
   font-family: "Norse";
 }
 
-.section5 .form input,
-.section5 .form textarea:-ms-input-placeholder {
+.section8 .form input,
+.section8 .form textarea:-ms-input-placeholder {
   font-family: "Norse";
 }
 
-.section5 .form input,
-.section5 .form textarea::-ms-input-placeholder {
+.section8 .form input,
+.section8 .form textarea::-ms-input-placeholder {
   font-family: "Norse";
 }
 
-.section5 .form input,
-.section5 .form textarea::placeholder {
+.section8 .form input,
+.section8 .form textarea::placeholder {
   font-family: "Norse";
 }
 
-.section5 .form button {
+.section8 .form textarea {
+  min-height: 233px;
+}
+
+.section8 .form button {
   font-family: "Norse";
   padding: 13px;
   font-weight: 600;
@@ -332,6 +364,21 @@ section .container {
   }
   header .menu ul li.branco {
     color: #fff;
+  }
+  header .menu.menuDesktop {
+    background: #fffe;
+  }
+  header .menu.menuDesktop ul {
+    margin: 5px 13px;
+  }
+  header .menu.menuDesktop ul li {
+    margin: 8px 21px;
+  }
+  header .menu.menuDesktop ul.logo {
+    width: 35px;
+  }
+  header .menu.menuDesktop ul.logo li {
+    margin: 8px;
   }
   section .container {
     max-width: 1140px;
