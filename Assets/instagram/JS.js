@@ -12,7 +12,7 @@ async function userInsta() {
     instagram.innerHTML += `
             <div class="avatar">
                 <a href="https://www.instagram.com/${obj.username}" target="_blank" rel =“noopener noreferrer nofollow”> 
-                    <img src="../Assets/image/profile.jpeg" alt="${obj.username}" title="${obj.username}"/>
+                    <img src="../Assets/image/Flor+de+Luz.jpeg" alt="${obj.username}" title="${obj.username}"/>
                 </a>
             </div>
             <div class="text">

@@ -67,6 +67,7 @@ header {
   }
 }
 section {
+  padding: 21px 55px;
   margin: 55px 0;
   .container {
     width: 100%;
@@ -88,8 +89,8 @@ section {
   .imagem {
     margin: auto;
     img {
-      width: calc(100vh / 1.3793);
-      height: 100vh;
+      width: calc(89vh / 1.3793);
+      height: 89vh;
     }
   }
 }
@@ -137,6 +138,9 @@ section {
     h2 {
       font-family: "Norse";
     }
+    p{
+      margin-top: 55px
+    }
   }
   .imagem {
     width: 55%;
@@ -174,6 +178,9 @@ section {
     h2 {
       font-family: "Norse";
     }
+    p{
+      margin-top: 55px
+    }
   }
 }
 .section5 {
@@ -207,15 +214,13 @@ section {
   .container {
     display: flex;
   }
-  .produtos,
-  .destaques {
-    width: 50%;
-  }
   .produtos {
+    width: 55%;
     display: flex;
     flex-wrap: wrap;
     .produto {
       width: 50%;
+      height: 144px;
       .texto {
         h4 {
           font-family: "Norse";
@@ -224,6 +229,7 @@ section {
     }
   }
   .destaques {
+    width: 45%;
     .destaque {
       display: none;
       &.selecionado {
@@ -235,7 +241,7 @@ section {
 .section7 {
   .texto {
     padding: 21px;
-    margin: 55px 0;
+    margin-bottom: 55px;
     h2 {
       margin: 34px 0;
       font-family: "Norse";
