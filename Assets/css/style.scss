@@ -30,6 +30,9 @@ h6 {
 p {
   line-height: 1.5em;
 }
+a {
+  text-decoration: none;
+}
 img {
   width: 100%;
   height: 100%;
@@ -131,26 +134,39 @@ section {
     display: flex;
   }
   .texto {
-    width: 45%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     h2 {
       font-family: "Norse";
     }
-    p{
-      margin-top: 55px
+    p {
+      margin-top: 55px;
+    }
+    a {
+      width: fit-content;
+      display: block;
+      padding: 13px 34px;
+      margin: 34px 0;
+      font-size: 21px;
+      font-weight: bold;
+      font-family: "Norse";
+      text-align: center;
+      border-radius: 13px;
+      background: linear-gradient(45deg, #ff2800, #800020);
+      color: #fff;
     }
   }
   .imagem {
-    width: 55%;
+    width: 45%;
     position: relative;
     img {
       width: 134%;
       height: auto;
       position: absolute;
       right: -34%;
-      bottom: -21%;
+      bottom: -34%;
     }
   }
 }
@@ -167,7 +183,7 @@ section {
       height: auto;
       position: absolute;
       left: -34%;
-      top: -21%;
+      top: -8%;
     }
   }
   .texto {
@@ -178,12 +194,27 @@ section {
     h2 {
       font-family: "Norse";
     }
-    p{
-      margin-top: 55px
+    p {
+      margin-top: 55px;
+    }
+    a {
+      width: fit-content;
+      display: block;
+      padding: 13px 34px;
+      margin: 34px 0;
+      font-size: 21px;
+      font-weight: bold;
+      font-family: "Norse";
+      text-align: center;
+      border-radius: 13px;
+      background: linear-gradient(45deg, #ff2800, #800020);
+      color: #fff;
     }
   }
 }
 .section5 {
+  padding: 89px 55px 21px;
+
   .container {
     display: flex;
   }
@@ -215,25 +246,130 @@ section {
     display: flex;
   }
   .produtos {
-    width: 55%;
+    width: 40%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
     .produto {
-      width: 50%;
-      height: 144px;
-      .texto {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      svg {
+        width: 24px;
+        margin-right: 13px;
+        fill: #888;
+      }
+      h4 {
+        font-family: "Norse";
+        color: #888;
+      }
+      &.selecionado {
+        svg {
+          fill: #000;
+        }
         h4 {
-          font-family: "Norse";
+          color: #000;
         }
       }
     }
   }
   .destaques {
-    width: 45%;
+    width: 60%;
     .destaque {
       display: none;
       &.selecionado {
         display: block;
+      }
+
+      .imagem {
+        padding: 21px;
+
+        .slide {
+          height: 377px;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          div[class*="seta"] {
+            height: 100%;
+            display: flex;
+            cursor: pointer;
+
+            svg {
+              width: 55px;
+            }
+          }
+
+          .seta-esq {
+            position: absolute;
+            left: -21px;
+          }
+
+          .seta-dir {
+            position: absolute;
+            right: -21px;
+          }
+
+          .itens {
+            width: 100%;
+            height: 377px;
+            border-radius: 13px;
+            position: absolute;
+            z-index: -1;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              z-index: 0;
+              &.ativo {
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .texto {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 21px;
+
+        h3 {
+          font-family: "Norse";
+          margin-bottom: 13px;
+        }
+
+        .descricao {
+          width: 100%;
+          margin-bottom: 13px;
+        }
+
+        a {
+          width: 46%;
+          display: block;
+          padding: 13px 21px;
+          margin: 2%;
+          font-size: 21px;
+          font-weight: bold;
+          font-family: "Norse";
+          text-align: center;
+          border-radius: 13px;
+        }
+
+        a.comprar {
+          background: linear-gradient(45deg, #ff2800, #800020);
+          color: #fff;
+        }
+
+        a.pergunta {
+          background: #ccc;
+          color: #000;
+        }
       }
     }
   }
@@ -311,7 +447,63 @@ section {
       .media {
         width: 250px;
         height: 250px;
-        margin: 5px;
+        margin: 34px 21px;
+        position: relative;
+        a {
+          color: #000;
+          img {
+            border-radius: 13px;
+            overflow: hidden;
+          }
+          .texto {
+            width: 89%;
+            padding: 13px;
+            margin: auto;
+            position: absolute;
+            bottom: -34px;
+            left: 50%;
+            background: #fff;
+            border-radius: 13px;
+            box-shadow: 2px 2px 5px #0002;
+            overflow: hidden;
+            transform: translateX(-50%);
+
+            p {
+              display: -webkit-box;
+              margin: 0;
+              font-size: 14px;
+              line-height: 1.2em;
+              overflow: hidden;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+
+            .footer {
+              display: flex;
+              justify-content: space-between;
+              padding-top: 8px;
+              margin-top: 8px;
+              border-top: 1px solid #ff280055;
+
+              p {
+                font-size: 14px;
+                font-family: "Norse";
+              }
+            }
+          }
+        }
+      }
+    }
+    .linkInstgram {
+      width: fit-content;
+      padding: 13px 21px;
+      margin: 55px auto 13px;
+      background: linear-gradient(45deg, #ff2800, #800020);
+      color: #fff;
+      border-radius: 13px;
+
+      a {
+        font-family: "Norse";
       }
     }
   }

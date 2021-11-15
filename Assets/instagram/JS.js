@@ -26,13 +26,23 @@ async function mediaInsta() {
     let obj = await (await fetch(url)).json();
     let instagram = document.querySelector('.instagram .medias')
 
-    for (let post of obj.data.slice(0, 8)) {
+    for (let post of obj.data.slice(0, 6)) {
         const tipo = post.media_type === "VIDEO" ?
             `<a href="${post.permalink}" target="_blank" rel =“noopener noreferrer nofollow”>
-                <img src="${post.thumbnail_url}" alt="${post.caption}" title="${post.caption}" />
+                <img src="${post.thumbnail_url}" alt="${post.caption}" />
+                <div class="texto">
+                    <p>${post.caption}</p>
+                </div>
             </a>` :
             `<a href="${post.permalink}" target="_blank" rel =“noopener noreferrer nofollow”>
-                <img src="${post.media_url}" alt="${post.caption}" title="${post.caption}" />
+                <img src="${post.media_url}" alt="${post.caption}"/>
+                <div class="texto">
+                    <p>${post.caption}</p>
+                    <div class="footer">
+                        <p>ver mais</p>
+                        <p>${new Date(post.timestamp).toLocaleDateString()}</p>
+                    </div>
+                </div>
             </a>`
 
         instagram.innerHTML += `

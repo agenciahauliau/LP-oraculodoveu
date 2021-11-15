@@ -40,6 +40,10 @@ p {
   line-height: 1.5em;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -197,7 +201,7 @@ section .container {
 }
 
 .section3 .texto {
-  width: 45%;
+  width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,8 +222,24 @@ section .container {
   margin-top: 55px;
 }
 
+.section3 .texto a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  padding: 13px 34px;
+  margin: 34px 0;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "Norse";
+  text-align: center;
+  border-radius: 13px;
+  background: linear-gradient(45deg, #ff2800, #800020);
+  color: #fff;
+}
+
 .section3 .imagem {
-  width: 55%;
+  width: 45%;
   position: relative;
 }
 
@@ -228,7 +248,7 @@ section .container {
   height: auto;
   position: absolute;
   right: -34%;
-  bottom: -21%;
+  bottom: -34%;
 }
 
 .section4 .container {
@@ -248,7 +268,7 @@ section .container {
   height: auto;
   position: absolute;
   left: -34%;
-  top: -21%;
+  top: -8%;
 }
 
 .section4 .texto {
@@ -271,6 +291,26 @@ section .container {
 
 .section4 .texto p {
   margin-top: 55px;
+}
+
+.section4 .texto a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  padding: 13px 34px;
+  margin: 34px 0;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "Norse";
+  text-align: center;
+  border-radius: 13px;
+  background: linear-gradient(45deg, #ff2800, #800020);
+  color: #fff;
+}
+
+.section5 {
+  padding: 89px 55px 21px;
 }
 
 .section5 .container {
@@ -328,25 +368,51 @@ section .container {
 }
 
 .section6 .produtos {
-  width: 55%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section6 .produtos .produto {
-  width: 50%;
-  height: 144px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 0;
 }
 
-.section6 .produtos .produto .texto h4 {
+.section6 .produtos .produto svg {
+  width: 24px;
+  margin-right: 13px;
+  fill: #888;
+}
+
+.section6 .produtos .produto h4 {
   font-family: "Norse";
+  color: #888;
+}
+
+.section6 .produtos .produto.selecionado svg {
+  fill: #000;
+}
+
+.section6 .produtos .produto.selecionado h4 {
+  color: #000;
 }
 
 .section6 .destaques {
-  width: 45%;
+  width: 60%;
 }
 
 .section6 .destaques .destaque {
@@ -355,6 +421,106 @@ section .container {
 
 .section6 .destaques .destaque.selecionado {
   display: block;
+}
+
+.section6 .destaques .destaque .imagem {
+  padding: 21px;
+}
+
+.section6 .destaques .destaque .imagem .slide {
+  height: 377px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.section6 .destaques .destaque .imagem .slide div[class*="seta"] {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.section6 .destaques .destaque .imagem .slide div[class*="seta"] svg {
+  width: 55px;
+}
+
+.section6 .destaques .destaque .imagem .slide .seta-esq {
+  position: absolute;
+  left: -21px;
+}
+
+.section6 .destaques .destaque .imagem .slide .seta-dir {
+  position: absolute;
+  right: -21px;
+}
+
+.section6 .destaques .destaque .imagem .slide .itens {
+  width: 100%;
+  height: 377px;
+  border-radius: 13px;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.section6 .destaques .destaque .imagem .slide .itens img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.section6 .destaques .destaque .imagem .slide .itens img.ativo {
+  z-index: 1;
+}
+
+.section6 .destaques .destaque .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 21px;
+}
+
+.section6 .destaques .destaque .texto h3 {
+  font-family: "Norse";
+  margin-bottom: 13px;
+}
+
+.section6 .destaques .destaque .texto .descricao {
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.section6 .destaques .destaque .texto a {
+  width: 46%;
+  display: block;
+  padding: 13px 21px;
+  margin: 2%;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "Norse";
+  text-align: center;
+  border-radius: 13px;
+}
+
+.section6 .destaques .destaque .texto a.comprar {
+  background: linear-gradient(45deg, #ff2800, #800020);
+  color: #fff;
+}
+
+.section6 .destaques .destaque .texto a.pergunta {
+  background: #ccc;
+  color: #000;
 }
 
 .section7 .texto {
@@ -442,7 +608,75 @@ section .container {
 .section7 .instagram .medias .media {
   width: 250px;
   height: 250px;
-  margin: 5px;
+  margin: 34px 21px;
+  position: relative;
+}
+
+.section7 .instagram .medias .media a {
+  color: #000;
+}
+
+.section7 .instagram .medias .media a img {
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.section7 .instagram .medias .media a .texto {
+  width: 89%;
+  padding: 13px;
+  margin: auto;
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  background: #fff;
+  border-radius: 13px;
+  -webkit-box-shadow: 2px 2px 5px #0002;
+          box-shadow: 2px 2px 5px #0002;
+  overflow: hidden;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section7 .instagram .medias .media a .texto p {
+  display: -webkit-box;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2em;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.section7 .instagram .medias .media a .texto .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #ff280055;
+}
+
+.section7 .instagram .medias .media a .texto .footer p {
+  font-size: 14px;
+  font-family: "Norse";
+}
+
+.section7 .instagram .linkInstgram {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 13px 21px;
+  margin: 55px auto 13px;
+  background: linear-gradient(45deg, #ff2800, #800020);
+  color: #fff;
+  border-radius: 13px;
+}
+
+.section7 .instagram .linkInstgram a {
+  font-family: "Norse";
 }
 
 .section8 .container {
