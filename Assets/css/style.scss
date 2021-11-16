@@ -6,6 +6,9 @@
   font-size: 14px;
   font-family: "Garamond";
 }
+html {
+  overflow-x: hidden;
+}
 li {
   list-style: none;
 }
@@ -40,19 +43,13 @@ img {
   object-fit: cover;
 }
 header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
   .menu {
-    display: flex;
-    flex: wrap;
-    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     ul {
-      width: calc((100% / 2) - 30px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
       margin: 13px;
       li {
         font-family: "Norse";
@@ -70,7 +67,7 @@ header {
   }
 }
 section {
-  padding: 21px 55px;
+  padding: 13px;
   margin: 55px 0;
   .container {
     width: 100%;
@@ -79,10 +76,7 @@ section {
   }
 }
 .section1 {
-  width: 100%;
   height: 100vh;
-  display: flex;
-  position: relative;
   margin-top: 0;
   background: linear-gradient(45deg, #ff2800, #800020);
   .container {
@@ -98,19 +92,15 @@ section {
   }
 }
 .section2 {
-  margin: 144px 0;
   .container {
-    height: 70v;
-    display: flex;
+    height: 100vh;
     position: relative;
   }
   .imagem {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    margin: 89px 0;
+    margin: 89px 0 34px;
     img {
       width: 233px;
+      margin: auto;
     }
   }
   .texto {
@@ -129,73 +119,32 @@ section {
   }
 }
 .section3 {
-  .container {
-    height: 70vh;
-    display: flex;
-  }
-  .texto {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h2 {
-      font-family: "Norse";
-    }
-    p {
-      margin-top: 55px;
-    }
-    a {
-      width: fit-content;
-      display: block;
-      padding: 13px 34px;
-      margin: 34px 0;
-      font-size: 21px;
-      font-weight: bold;
-      font-family: "Norse";
-      text-align: center;
-      border-radius: 13px;
-      background: linear-gradient(45deg, #ff2800, #800020);
-      color: #fff;
-    }
-  }
   .imagem {
-    width: 45%;
     position: relative;
     img {
       width: 134%;
       height: auto;
-      position: absolute;
-      right: -34%;
-      bottom: -34%;
+      position: relative;
+      margin-top: -34%;
     }
   }
 }
 .section4 {
-  .container {
-    height: 70vh;
-    display: flex;
-  }
   .imagem {
-    width: 55%;
     position: relative;
     img {
       width: 134%;
       height: auto;
-      position: absolute;
-      left: -34%;
-      top: -8%;
     }
   }
+}
+.section3, .section4 {
   .texto {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     h2 {
       font-family: "Norse";
     }
     p {
-      margin-top: 55px;
+      margin-top: 34px;
     }
     a {
       width: fit-content;
@@ -213,16 +162,7 @@ section {
   }
 }
 .section5 {
-  padding: 89px 55px 21px;
-
-  .container {
-    display: flex;
-  }
   .esquerda {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     p {
       font-family: "Norse";
       font-size: 1.25em;
@@ -230,11 +170,6 @@ section {
     }
   }
   .direita {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     p {
       width: 89%;
       margin-top: 55px;
@@ -242,17 +177,12 @@ section {
   }
 }
 .section6 {
-  .container {
-    display: flex;
-  }
   .produtos {
-    width: 40%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
 
     .produto {
-      width: 100%;
+      width: 50%;
       display: flex;
       align-items: center;
       margin: 8px 0;
@@ -276,7 +206,6 @@ section {
     }
   }
   .destaques {
-    width: 60%;
     .destaque {
       display: none;
       &.selecionado {
@@ -287,7 +216,7 @@ section {
         padding: 21px;
 
         .slide {
-          height: 377px;
+          height: 233px;
           display: flex;
           align-items: center;
           position: relative;
@@ -296,25 +225,24 @@ section {
             height: 100%;
             display: flex;
             cursor: pointer;
+            position: absolute;
 
             svg {
-              width: 55px;
+              width: 34px;
             }
           }
 
           .seta-esq {
-            position: absolute;
-            left: -21px;
+            left: -34px;
           }
 
           .seta-dir {
-            position: absolute;
-            right: -21px;
+            right: -34px;
           }
 
           .itens {
             width: 100%;
-            height: 377px;
+            height: 233px;
             border-radius: 13px;
             position: absolute;
             z-index: -1;
@@ -354,7 +282,7 @@ section {
           display: block;
           padding: 13px 21px;
           margin: 2%;
-          font-size: 21px;
+          font-size: 16px;
           font-weight: bold;
           font-family: "Norse";
           text-align: center;
@@ -377,7 +305,7 @@ section {
 .section7 {
   .texto {
     padding: 21px;
-    margin-bottom: 55px;
+    margin-bottom: 34px;
     h2 {
       margin: 34px 0;
       font-family: "Norse";
@@ -387,22 +315,24 @@ section {
     }
   }
   .instagram {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif;
+    font-family: 'Source-Sans';
+    font-weight: 400;
+
     .head {
       display: flex;
-      margin: 21px;
       .avatar {
-        width: 120px;
-        height: 120px;
+        width: 89px;
+        min-width: 89px;
+        height: 89px;
+        min-height: 89px;
         position: relative;
         img {
           border-radius: 50%;
         }
         &::before {
           content: "";
-          width: 130px;
-          height: 130px;
+          width: 99px;
+          height: 99px;
           position: absolute;
           top: -5px;
           left: -5px;
@@ -420,8 +350,8 @@ section {
         }
         &::after {
           content: "";
-          width: 126px;
-          height: 126px;
+          width: 95px;
+          height: 95px;
           position: absolute;
           top: -3px;
           left: -3px;
@@ -431,7 +361,7 @@ section {
         }
       }
       .text {
-        margin: 21px 21px 34px;
+        margin: 0 21px;
         h3 {
           margin: 8px 0;
         }
@@ -445,8 +375,8 @@ section {
       flex-wrap: wrap;
       justify-content: center;
       .media {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         margin: 34px 21px;
         position: relative;
         a {
@@ -472,7 +402,8 @@ section {
               display: -webkit-box;
               margin: 0;
               font-size: 14px;
-              line-height: 1.2em;
+              font-family: "Source-Sans";
+              font-weight: 400;
               overflow: hidden;
               -webkit-line-clamp: 3;
               -webkit-box-orient: vertical;
@@ -483,11 +414,12 @@ section {
               justify-content: space-between;
               padding-top: 8px;
               margin-top: 8px;
-              border-top: 1px solid #ff280055;
+              border-top: 1px solid rgba(255, 40, 0, 0.333);
 
               p {
                 font-size: 14px;
                 font-family: "Norse";
+                font-weight: bold;
               }
             }
           }
@@ -509,13 +441,9 @@ section {
   }
 }
 .section8 {
-  .container {
-    display: flex;
-  }
   .texto {
-    width: 50%;
     padding: 21px;
-    margin: 55px 0;
+    margin: 55px 0 0;
     h2 {
       margin: 34px 0;
       font-family: "Norse";
@@ -527,14 +455,12 @@ section {
     }
   }
   .form {
-    width: 50%;
-    margin: 55px 0;
     input,
     textarea {
       width: 100%;
       padding: 13px 21px;
       margin: 8px 0;
-      border: 1px solid #0005;
+      border: 1px solid rgba(0, 0, 0, 0.333);
     }
     input,
     textarea::placeholder {
@@ -551,16 +477,55 @@ section {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  section {
+    padding: 21px;
+    margin: 0;
+  }
+  .section4 {
+    .imagem {
+      img {
+        top: 0;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 820px) {
   * {
     font-size: 18px;
   }
-
+  section {
+    .container {
+      max-width: 1140px;
+      margin: auto;
+    }
+  }
   header {
     .menu {
+      display: flex;
+      flex: wrap;
+      justify-content: center;
       ul {
-        li.branco {
-          color: #fff;
+        width: calc((100% / 2) - 30px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 13px;
+        li {
+          font-family: "Norse";
+          font-size: 1.2em;
+          font-weight: 800;
+          margin: 21px;
+          &.branco {
+            color: #fff;
+          }
+        }
+        &.logo {
+          width: 60px;
+          li {
+            margin: 8px;
+          }
         }
       }
       &.menuDesktop {
@@ -581,9 +546,237 @@ section {
     }
   }
   section {
+    padding: 21px 55px;
+  }
+  .section1 {
+    display: flex;
+    position: relative;
+  }
+  .section2 {
     .container {
-      max-width: 1140px;
-      margin: auto;
+      display: flex; 
+    }
+    .imagem {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      margin: 89px 0;
+      img {
+        height: auto;
+      }
+    }
+  }
+  .section3 {
+    .container {
+      height: 70vh;
+      display: flex;
+    }
+    .texto {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        margin-top: 55px;
+      }
+    }
+    .imagem {
+      width: 45%;
+      img {
+        margin-top: 21%;
+        position: absolute;
+        right: -34%;
+      }
+    }
+  }
+  .section4 {
+    .container {
+      height: 70vh;
+      display: flex;
+    }
+    .imagem {
+      width: 55%;
+      img {
+        width: 134%;
+        height: auto;
+        position: absolute;
+        left: -34%;
+      }
+    }
+    .texto {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        margin-top: 55px;
+      }
+    }
+  }
+  .section5 {
+    padding: 55px;
+
+    .container {
+      display: flex;
+    }
+    .esquerda {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .direita {
+      width: 55%;
+    }
+  }
+  .section6 {
+    .container {
+      display: flex;
+    }
+    .produtos {
+      width: 40%;
+      flex-direction: column;
+      justify-content: center;
+
+      .produto {
+        width: 100%;
+      }
+    }
+    .destaques {
+      width: 60%;
+      .destaque {
+        .imagem {
+          .slide {
+            height: 377px;
+            div[class*="seta"] {
+              svg {
+                width: 55px;
+              }
+            }
+            .seta-esq {
+              left: -55px;
+            }
+            .seta-dir {
+              right: -55px;
+            }
+            .itens {
+              height: 377px;
+            }
+          }
+        }
+
+        .texto {
+          a {
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+  .section7 {
+    .texto {
+      margin-bottom: 55px;
+    }
+    .instagram {
+      .head {
+        margin: 21px;
+        .avatar {
+          width: 120px;
+          height: 120px;
+          &::before {
+            width: 130px;
+            height: 130px;
+          }
+          &::after {
+            width: 126px;
+            height: 126px;
+          }
+        }
+        .text {
+          margin: 21px 21px 34px;
+        }
+      }
+      .medias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .media {
+          width: 300px;
+          height: 300px;
+          margin: 34px 21px;
+          position: relative;
+          a {
+            color: #000;
+            img {
+              border-radius: 13px;
+              overflow: hidden;
+            }
+            .texto {
+              width: 89%;
+              padding: 13px;
+              margin: auto;
+              position: absolute;
+              bottom: -34px;
+              left: 50%;
+              background: #fff;
+              border-radius: 13px;
+              box-shadow: 2px 2px 5px #0002;
+              overflow: hidden;
+              transform: translateX(-50%);
+
+              p {
+                display: -webkit-box;
+                margin: 0;
+                font-size: 14px;
+                font-family: "Source-Sans";
+                font-weight: 400;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+              }
+
+              .footer {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 8px;
+                margin-top: 8px;
+                border-top: 1px solid rgba(255, 40, 0, 0.333);
+
+                p {
+                  font-size: 14px;
+                  font-family: "Norse";
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+      .linkInstgram {
+        width: fit-content;
+        padding: 13px 21px;
+        margin: 55px auto 13px;
+        background: linear-gradient(45deg, #ff2800, #800020);
+        color: #fff;
+        border-radius: 13px;
+
+        a {
+          font-family: "Norse";
+        }
+      }
+    }
+  }
+  .section8 {
+    .container {
+      display: flex;
+    }
+    .texto {
+      width: 50%;
+      margin: 55px 0;
+    }
+    .form {
+      width: 50%;
+      margin: 55px 0;
     }
   }
 }
